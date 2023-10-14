@@ -1,0 +1,72 @@
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Questrial', sans-serif;
+    min-height: 100%;
+}
+
+body{
+    background-color: rgba(214, 227, 248, 1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flex{
+    display: inline-flex;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.radio{
+    display: none;
+}
+
+.radio-label{
+    padding: 8px 14px;
+    background: rgba(172, 191, 215, 1);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.radio-label:not(:last-of-type){
+    border-right: 1px solid rgba(41, 50, 65, 1);
+}
+
+.radio:checked + .radio-label{
+    background: rgba(117, 148, 189, 1);
+}
+
+button{
+    padding: 8px 14px;
+    width: 5rem;
+    border-radius: 10px;
+    border: none;
+    margin: 2rem;
+    cursor: pointer;
+    background: rgba(117, 148, 189, 1);
+}
+
+button:hover{
+    background: rgba(41, 50, 65, 1);
+    color: whitesmoke;
+    transition: background 0.2s;
+}
+
+#bmiCalculator{
+    display: flex;
+    flex-direction: column;
+}
+
+#submit{
+    align-self: center;
+}
+
+#bmi{
+    margin: 1rem;
+    align-self: center;
+}

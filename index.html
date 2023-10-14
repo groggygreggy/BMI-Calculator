@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Questrial&display=swap" rel="stylesheet">
+    <title>bmi calculator</title>
+</head>
+
+<body>
+    <h1>BMI Calculator</h1>
+
+    <form id="measurementForm">
+        <div class="flex">
+            <input type="radio" value="imperial" name="measurement" id="imperialMeasurement" class="radio" >
+            <label for="imperialMeasurement" class="radio-label">Imperial System</label>
+            <br>
+
+            <input type="radio" value="metric" name="measurement" id="metricMeasurement" class="radio">
+            <label for="metricMeasurement" class="radio-label">Metric System</label>
+            <br>
+            
+        </div>
+        <button id="firstBtn">Select</button>
+    </form>
+
+    <form id="bmiCalculator">    
+        <!-- for imperial -->
+        <span>
+        <label for="weight-imperial" class="imperial">Please enter your weight</label>
+        <input type="number" name="weight" min="0" id="weight-imperial" class="imperial"><span class="imperial">lbs</span></span>
+        <br>
+        <!-- for metric -->
+        <span>
+        <label for="weight-metric" class="metric">Please enter your weight</label>
+        <input type="number" name="weight" min="0" id= "weight-metric" class="metric"><span class="metric">kgs</span></span>
+        <br>
+
+        <!-- for imperial -->
+        <span>
+        <label for="height" class="imperial">Please enter your height</label>
+        <input type="number" name="feet" min="0" max="7" id="height-ft" class="imperial"><span class="imperial">ft</span>
+        <input type="number" name="inches" min="0" max="11" id="height-in" class="imperial"><span class="imperial">in</span></span>
+        <br>
+
+        <!-- metric -->
+        <span>
+        <label for="height-metric" class="metric">Please enter your height</label>
+        <input type="number" name="cm" min="0" id="height-metric" class="metric"><span class="metric">cm</span></span>
+        <br>
+
+        <button type="submit" id="submit">Enter</button>
+
+        <h1 id="bmi"></h1>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
